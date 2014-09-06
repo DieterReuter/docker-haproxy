@@ -26,4 +26,4 @@ if [[ -f "$OVERRIDE/$CONFIG" ]]; then
   ln -s "$OVERRIDE/$CONFIG" "$CONFIG"
 fi
 
-haproxy -f /etc/haproxy/haproxy.cfg -p "$PIDFILE"
+haproxy -d -V -f /etc/haproxy/haproxy.cfg -p "$PIDFILE"
